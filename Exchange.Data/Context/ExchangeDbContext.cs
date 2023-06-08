@@ -24,5 +24,11 @@ namespace Exchange.Data.Context
 
 
 
+        public DbSet<UserSetting> UserSettings { get; set; }
+        public DbSet<Image> Images { get; set; }
+        public DbSet<DailyClosed> dailyCloseds { get; set; }
+        public DbSet<EmailTransaction> EmailTransactions { get; set; }
+
+
     }
 }

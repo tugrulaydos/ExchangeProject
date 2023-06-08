@@ -13,4 +13,12 @@
     <PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="11.5.2" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="AutoMapper\" />
+    <Folder Include="Extensions\" />
+    <Folder Include="FluentValidations\" />
+    <Folder Include="Services\Abstractions\" />
+    <Folder Include="Services\Concretes\" />
+  </ItemGroup>
+
 </Project>
