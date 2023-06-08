@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Exchange.Data.Repositories.UnitOfWorks.Abstractions
 {
-    public interface IUnitOfWork : IAsyncDisposable
+    public interface IUnitOfWork : IAsyncDisposable //kaynağı asenkron olarak kapatır. 
     {
         IRepository<T> GetRepository<T>() where T : class, IEntityBase, new();
 
