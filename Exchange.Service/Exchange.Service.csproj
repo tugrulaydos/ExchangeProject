@@ -18,7 +18,11 @@
     <Folder Include="Extensions\" />
     <Folder Include="FluentValidations\" />
     <Folder Include="Services\Abstractions\" />
-    <Folder Include="Services\Concretes\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Exchange.Data\Exchange.Data.csproj" />
+    <ProjectReference Include="..\Exchange.Entity\Exchange.Entity.csproj" />
   </ItemGroup>
 
 </Project>

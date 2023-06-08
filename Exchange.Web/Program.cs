@@ -17,20 +17,16 @@ namespace Exchange.Web
         {
             var builder = WebApplication.CreateBuilder(args);
 
+            //DI'lar Daha Sonra Extension Method Ýçerisinde Yazýlacak.
             var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
             builder.Services.AddDbContext<ExchangeDbContext>(options => options.UseSqlServer(connectionString));
-
             // Add services to the container.
-            builder.Services.AddControllersWithViews();
-
-            //builder.Services.LoadDataLayerExtension(builder.Configuration);
-
+            builder.Services.AddControllersWithViews(); 
             builder.Services.AddScoped(typeof(IRepository<>), typeof(Repository<>)); //Repositroy DI
 
            
 
             builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
-
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
