@@ -13,6 +13,8 @@ namespace Exchange.Entity.Entities
 
         public string Font { get; set; }
 
+        public short CardType { get; set; }
+
         public AppUser User { get; set; }
 
 
