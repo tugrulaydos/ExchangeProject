@@ -27,6 +27,7 @@ namespace Exchange.Web
             builder.Services.AddScoped(typeof(IRepository<>), typeof(Repository<>)); //Repositroy DI
             //builder.Services.AddScoped<IUserService, UserService>();
             builder.Services.AddScoped<ICurrencyService, CurrencyService>();
+           
 
 
 
