@@ -3,6 +3,8 @@ using Exchange.Data.Repositories.Abstractions;
 using Exchange.Data.Repositories.Concretes;
 using Exchange.Data.Repositories.UnitOfWorks.Abstractions;
 using Exchange.Data.Repositories.UnitOfWorks.Concretes;
+using Exchange.Service.Services.Abstractions;
+using Exchange.Service.Services.Concretes;
 using Microsoft.EntityFrameworkCore;
 using System.Configuration;
 
@@ -23,8 +25,11 @@ namespace Exchange.Web
             // Add services to the container.
             builder.Services.AddControllersWithViews(); 
             builder.Services.AddScoped(typeof(IRepository<>), typeof(Repository<>)); //Repositroy DI
+            //builder.Services.AddScoped<IUserService, UserService>();
+            builder.Services.AddScoped<ICurrencyService, CurrencyService>();
 
-           
+
+
 
             builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
             var app = builder.Build();

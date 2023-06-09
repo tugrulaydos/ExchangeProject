@@ -9,7 +9,7 @@ namespace Exchange.Service.Services.Abstractions
 {
     public interface IUserService
     {
-        Task<List<UserDto>> GetAllUserWithRoleAsync();
+        Task<List<UserDto>> GetAllUser();
 
     }
 }
