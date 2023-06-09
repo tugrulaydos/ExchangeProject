@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Exchange.Service.ApiModels
+namespace Exchange.Entity.ApiModels.Currencies
 {
-    public class CurrencyModel
+    public class GoldCurrencyModel
     {
         public string Buying { get; set; }
         public string Selling { get; set; }

@@ -1,4 +1,5 @@
-﻿using Exchange.Service.ApiModels;
+﻿
+using Exchange.Entity.ApiModels.Currencies;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,8 +10,8 @@ namespace Exchange.Service.Services.Abstractions
 {
     public interface ICurrencyService
     {
-        Task<CurrencyAndDateModel> GetCurrenciesWithDate();
-        Task<List<CurrencyModel>> GetCurrencies();
+        Task<GoldCurrencyAndDateModel> GetCurrenciesWithDate();
+        Task<List<GoldCurrencyModel>> GetCurrencies();
 
     }
 }
